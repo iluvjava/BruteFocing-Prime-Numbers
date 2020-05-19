@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchMarkingWithPrimeNumbers", "BenchMarkingWithPrimeNumbers\BenchMarkingWithPrimeNumbers.csproj", "{AB23D12C-1E9B-497F-AC4E-82B5ADCB9574}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB23D12C-1E9B-497F-AC4E-82B5ADCB9574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB23D12C-1E9B-497F-AC4E-82B5ADCB9574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB23D12C-1E9B-497F-AC4E-82B5ADCB9574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB23D12C-1E9B-497F-AC4E-82B5ADCB9574}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11EFB9E6-D653-44CD-A84E-9E94828F5981}
+	EndGlobalSection
+EndGlobal
