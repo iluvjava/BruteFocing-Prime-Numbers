@@ -5,17 +5,31 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace BenchMarkingWithPrimeNumbers
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Program Starting. Number of number to search for prime is: ");
             int n = 0b1_00000_00000_00000_00000_00000_00000;
-
+            // int n = 0b1_00000_00000_00000_00000;
+            Console.WriteLine($"{n}");
+            
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
             int[] primes = ComputeNode.FindAllPrimesUnder(n);
+            sw.Stop();
+            TimeSpan ts = sw.Elapsed;
+            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+            ts.Hours, ts.Minutes, ts.Seconds,
+            ts.Milliseconds / 10);
+            
+            Console.WriteLine("Thime Took in Mili: ");
+            Console.WriteLine($"Runtime {elapsedTime}");
+
             StringBuilder sb = new StringBuilder();
 
             foreach (int I in primes)
@@ -23,13 +37,14 @@ namespace BenchMarkingWithPrimeNumbers
                 sb.Append($"{I},");
             }
 
-
-            using (StreamWriter sw = new StreamWriter("Prime Number.txt"))
+            const String FileLocation = "Prime Number.txt";
+            using (StreamWriter streamWriter = new StreamWriter(FileLocation))
             {
-                sw.Write(sb.ToString());
+                streamWriter.Write(sb.ToString());
+                Console.WriteLine($"All Prime Numbers are now in ${Path.GetFullPath(FileLocation)}");
             }
-
-            Console.WriteLine(sb.ToString());
+            Console.ReadLine();
+            
         }
     }
 
